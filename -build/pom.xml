@@ -13,7 +13,6 @@
 	<modules>
 		<module>targetplatform</module>
 		
-		<module>../de.walware.rj.client</module>
 		<module>../de.walware.rj.eclient.graphics</module>
 	</modules>
 	
@@ -68,20 +67,6 @@
 							<version>2.1.0-SNAPSHOT</version>
 						</artifact>
 					</target>
-					<dependency-resolution>
-						<extraRequirements>
-							<requirement>
-								<type>eclipse-plugin</type>
-								<id>org.eclipse.equinox.common</id>
-								<versionRange>[3.6,4.0)</versionRange>
-							</requirement>
-							<requirement>
-								<type>eclipse-plugin</type>
-								<id>org.eclipse.core.runtime</id>
-								<versionRange>[3.8,4.0)</versionRange>
-							</requirement>
-						</extraRequirements>
-					</dependency-resolution>
 				</configuration>
 			</plugin>
 			
