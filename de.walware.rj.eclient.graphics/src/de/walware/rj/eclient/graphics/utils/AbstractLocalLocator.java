@@ -18,7 +18,7 @@ import java.util.List;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 
-import de.walware.ecommons.ts.ISystemReadRunnable;
+import de.walware.ecommons.ts.ISystemRunnable;
 import de.walware.ecommons.ts.ITool;
 import de.walware.ecommons.ts.IToolService;
 import de.walware.jcommons.collections.ImCollections;
@@ -36,7 +36,7 @@ import de.walware.rj.eclient.graphics.LocatorCallback;
  * Requests the user to locate point and converts the graphic coordinates to user coordinates.
  * It uses the tool service API (de.walware.ecommons.ts) to schedule the R job.</p>
  */
-public abstract class AbstractLocalLocator extends LocatorCallback implements ISystemReadRunnable {
+public abstract class AbstractLocalLocator extends LocatorCallback implements ISystemRunnable {
 	
 	protected static final ImList<String> OK_CANCEL_STOP_TYPES= ImCollections.newList(
 			IERGraphic.LOCATOR_DONE, IERGraphic.LOCATOR_CANCEL );
