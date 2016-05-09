@@ -49,10 +49,10 @@ public abstract class AbstractLocalLocator extends LocatorCallback implements IS
 	private boolean fGraphicLocatorStarted;
 	private boolean fRunnableScheduled;
 	
-	private final List<double[]> fToConvert = new ArrayList<double[]>();
+	private final List<double[]> fToConvert = new ArrayList<>();
 	
-	private final List<double[]> fLocatedGraphic = new ArrayList<double[]>();
-	private final List<double[]> fLocatedUser = new ArrayList<double[]>();
+	private final List<double[]> fLocatedGraphic = new ArrayList<>();
+	private final List<double[]> fLocatedUser = new ArrayList<>();
 	
 	private volatile int fCounter;
 	
@@ -203,7 +203,7 @@ public abstract class AbstractLocalLocator extends LocatorCallback implements IS
 		}
 		fStarted = false;
 		if (type == IERGraphic.LOCATOR_DONE) {
-			finished(new ArrayList<double[]>(fLocatedGraphic), new ArrayList<double[]>(fLocatedUser));
+			finished(new ArrayList<>(fLocatedGraphic), new ArrayList<>(fLocatedUser));
 		}
 		else {
 			canceled();

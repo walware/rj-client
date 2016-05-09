@@ -111,9 +111,9 @@ public class EclipseRGraphicFactory implements RClientGraphicFactory, IERGraphic
 	}
 	
 	
-	private final FastList<EclipseRGraphic> fGraphics = new FastList<EclipseRGraphic>(EclipseRGraphic.class, FastList.IDENTITY);
+	private final FastList<EclipseRGraphic> fGraphics = new FastList<>(EclipseRGraphic.class, FastList.IDENTITY);
 	
-	private final FastList<IERGraphicsManager.Listener> fListeners = new FastList<IERGraphicsManager.Listener>(IERGraphicsManager.Listener.class, FastList.IDENTITY);
+	private final FastList<IERGraphicsManager.Listener> fListeners = new FastList<>(IERGraphicsManager.Listener.class, FastList.IDENTITY);
 	private final AddedSafeRunnable fAddedRunnable = new AddedSafeRunnable();
 	private final RemovedSafeRunnable fRemovedRunnable = new RemovedSafeRunnable();
 	private final ShowSafeRunnable fShowRunnable = new ShowSafeRunnable();
@@ -144,9 +144,9 @@ public class EclipseRGraphicFactory implements RClientGraphicFactory, IERGraphic
 	
 	@Override
 	public Map<String, ? extends Object> getInitServerProperties() {
-		final Map<String, Object> map = new HashMap<String, Object>();
+		final Map<String, Object> map = new HashMap<>();
 		final IPreferencesService preferences = Platform.getPreferencesService();
-		final AtomicReference<double[]> dpi = new AtomicReference<double[]>();
+		final AtomicReference<double[]> dpi = new AtomicReference<>();
 		dpi.set(RGraphicsPreferencePage.parseDPI(preferences.getString(
 				RGraphics.PREF_DISPLAY_QUALIFIER, RGraphics.PREF_DISPLAY_CUSTOM_DPI_KEY, null, null )));
 		if (dpi.get() == null) {

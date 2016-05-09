@@ -272,7 +272,7 @@ public class RGraphicCompositeActionSet implements IERGraphic.ListenerLocatorExt
 	}
 	
 	
-	private final List<IActionBars> fActionBars = new ArrayList<IActionBars>(4);
+	private final List<IActionBars> fActionBars = new ArrayList<>(4);
 	
 	private IERGraphic fGraphic;
 	private final RGraphicComposite fGraphicComposite;
@@ -280,7 +280,7 @@ public class RGraphicCompositeActionSet implements IERGraphic.ListenerLocatorExt
 	
 	private HandlerCollection fHandlerCollection;
 	
-	private final FastList<LocationListener> fMouseLocationListeners = new FastList<LocationListener>(LocationListener.class);
+	private final FastList<LocationListener> fMouseLocationListeners = new FastList<>(LocationListener.class);
 	private MouseLocationListener fMouseListenerListener;
 	private ConversionRunnable fMouseLocationRunnable;
 	

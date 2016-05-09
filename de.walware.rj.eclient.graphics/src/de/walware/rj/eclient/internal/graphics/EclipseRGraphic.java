@@ -348,10 +348,10 @@ public class EclipseRGraphic implements RClientGraphic, IERGraphic {
 	private double[] fLocatorLocationValue; // only used for R
 	private final Object fLocatorAnswerLock = new Object(); // pipe for answers
 	
-	private final FastList<IERGraphic.Listener> fGraphicListeners = new FastList<IERGraphic.Listener>(IERGraphic.Listener.class, FastList.IDENTITY);
+	private final FastList<IERGraphic.Listener> fGraphicListeners = new FastList<>(IERGraphic.Listener.class, FastList.IDENTITY);
 	
 	private IStatus fMessage = Status.OK_STATUS;
-	private final FastList<IStatusChangeListener> fMessageListeners = new FastList<IStatusChangeListener>(IStatusChangeListener.class, FastList.IDENTITY);
+	private final FastList<IStatusChangeListener> fMessageListeners = new FastList<>(IStatusChangeListener.class, FastList.IDENTITY);
 	
 	private boolean fLocatorNotificationDirectScheduled;
 	private boolean fLocatorNotificationDeferredScheduled;

@@ -23,7 +23,7 @@ public class ColorManager {
 	
 	private final Display fDisplay;
 	
-	private final IntHashMap<Color> fColors = new IntHashMap<Color>(0x7f);
+	private final IntHashMap<Color> fColors = new IntHashMap<>(0x7f);
 	
 	
 	public ColorManager(final Display display) {

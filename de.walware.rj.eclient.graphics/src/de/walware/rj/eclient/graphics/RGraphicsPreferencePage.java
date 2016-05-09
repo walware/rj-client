@@ -312,7 +312,7 @@ public class RGraphicsPreferencePage extends PreferencePage implements IWorkbenc
 		fSymbolUseControl = new Button(group, SWT.CHECK);
 		fSymbolUseControl.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 3, 1));
 		fSymbolUseControl.setText("Use special S&ymbol Font");
-		final List<Control> symbolControls = new ArrayList<Control>();
+		final List<Control> symbolControls = new ArrayList<>();
 		addFont(group, fSymbolFontPref, "Symbol &Font:",
 				LayoutUtil.defaultIndent(), symbolControls );
 		{	final Label label = new Label(group, SWT.NONE);

@@ -33,8 +33,8 @@ public class ERClientGraphicActions extends AbstractRJComClientGraphicActions
 	
 	private final ITool fTool;
 	
-	private final IntArrayMap<Boolean> fResizeTasks = new IntArrayMap<Boolean>();
-	private final IntArrayMap<Boolean> fCloseTasks = new IntArrayMap<Boolean>();
+	private final IntArrayMap<Boolean> fResizeTasks = new IntArrayMap<>();
+	private final IntArrayMap<Boolean> fCloseTasks = new IntArrayMap<>();
 	
 	
 	public ERClientGraphicActions(final AbstractRJComClient rjs, final ITool tool) {

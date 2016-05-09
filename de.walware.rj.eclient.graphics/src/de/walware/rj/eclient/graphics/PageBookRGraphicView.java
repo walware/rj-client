@@ -470,7 +470,7 @@ public abstract class PageBookRGraphicView extends ManagedPageBookView<PageBookR
 	}
 	
 	private String[] collectContextMenuPreferencePages() {
-		final List<String> pageIds = new ArrayList<String>();
+		final List<String> pageIds = new ArrayList<>();
 		collectContextMenuPreferencePages(pageIds);
 		return pageIds.toArray(new String[pageIds.size()]);
 	}

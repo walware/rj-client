@@ -514,7 +514,7 @@ public class FontManager {
 	private TestGC fTestGC;
 	private boolean fDisposed;
 	
-	private final Map<String, FontFamily> fFontFamilies = new HashMap<String, FontFamily>();
+	private final Map<String, FontFamily> fFontFamilies = new HashMap<>();
 	
 	
 	public FontManager(final Display display) {
