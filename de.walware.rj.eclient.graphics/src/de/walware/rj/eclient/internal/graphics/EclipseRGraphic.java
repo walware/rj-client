@@ -702,9 +702,9 @@ public class EclipseRGraphic implements RClientGraphic, IERGraphic {
 	}
 	
 	@Override
-	public void addSetFont(String family, final int face, final double pointSize,
-			final double lineHeight) {
-//		System.out.println("==\nSetFont: \"" + family + "\" " + face + " " + pointSize + " (cex= " + cex + ")");
+	public void addSetFont(String family, final int face, final float pointSize,
+			final float lineHeight) {
+//		System.out.println("==\nSetFont: \"" + family + "\" " + face + " " + pointSize);
 		switch (face) {
 		case 2:
 		case 3:
@@ -733,7 +733,7 @@ public class EclipseRGraphic implements RClientGraphic, IERGraphic {
 		
 		fLastStringEnc = null;
 		
-		final FontSetting instr = new FontSetting(family, face, pointSize, lineHeight,
+		final FontSetting instr= new FontSetting(family, face, pointSize, lineHeight,
 				fCurrentFontFamily.getSWTFont(fCurrentFontStyle, fCurrentFontSize),
 				fCurrentFontFamily.getSWTFontProperties(fCurrentFontStyle, fCurrentFontSize) );
 		add(instr);
@@ -755,8 +755,9 @@ public class EclipseRGraphic implements RClientGraphic, IERGraphic {
 	}
 	
 	@Override
-	public void addSetLine(final int type, final double width) {
-		final LineSetting instr = new LineSetting(type, width);
+	public void addSetLine(final int type, final float width,
+			final byte cap, final byte join, final float joinMiterLimit) {
+		final LineSetting instr= new LineSetting(type, width, cap, join, joinMiterLimit);
 		add(instr);
 	}
 	

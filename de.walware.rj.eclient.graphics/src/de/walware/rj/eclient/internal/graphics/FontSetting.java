@@ -18,14 +18,14 @@ import de.walware.rj.graphic.RFontSetting;
 import de.walware.rj.eclient.graphics.IERGraphicInstruction;
 
 
-public class FontSetting extends RFontSetting implements IERGraphicInstruction {
+public final class FontSetting extends RFontSetting implements IERGraphicInstruction {
 	
 	
 	public final Font swtFont;
 	public final double[] swtProperties;
 	
 	
-	public FontSetting(final String family, final int face, final double pointSize, final double lineHeight,
+	public FontSetting(final String family, final int face, final float pointSize, final double lineHeight,
 			final Font swtFont, final double[] swtProperties) {
 		super(family, face, pointSize, lineHeight);
 		this.swtFont = swtFont;
